@@ -10,4 +10,5 @@
   "arrowParens": "avoid",
   "proseWrap": "always",
   "editor.defaultFormatter": "esbenp.prettier-vscode"
+
 }

@@ -15,7 +15,7 @@ const Navbar = () => {
       <ul className={styles.menu}>{elements}</ul>
       <div>
         <NavLink to="/registration" className={styles.link}>
-          Registration
+          Registr
         </NavLink>
         <NavLink to="/login" className={styles.link}>
           Login
