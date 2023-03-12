@@ -1,0 +1,12 @@
+.button {
+  background-color: beige;
+  padding: 10 15 px;
+  border: 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+}
+.button:hower {
+  background-color: blue;
+  color: #fff;
+}

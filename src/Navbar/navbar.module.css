@@ -2,6 +2,11 @@
   list-style: none;
   display: flex;
   flex-direction: row;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 3%,
+    rgba(129, 253, 45, 0.2945553221288515) 52%
+  );
 }
 
 .link {
@@ -9,11 +14,25 @@
   font-size: 16px;
   line-height: 30px;
   font-weight: 300;
-  color: gray;
+  color: black;
   padding: 20px;
   text-decoration: none;
 }
 
 .link:global(.active) {
   color: orange;
+}
+.auth {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  color: white;
+  margin-left: auto;
+  border-radius: 5px;
+  border: 1 px solid gray;
+}
+.menuPages {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
 }
