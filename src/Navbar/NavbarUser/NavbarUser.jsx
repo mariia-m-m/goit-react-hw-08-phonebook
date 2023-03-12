@@ -1,5 +1,3 @@
-import styles from '../NavbarUser/navbarUser.module.css';
-
 const NavbarUser = () => {
   return (
     <div>
