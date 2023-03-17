@@ -27,7 +27,7 @@ export const login = async (data) => {
 export const getCurrent = async (token) => {
     try {
         setToken(token)
-        const { data } = await instance.post("/users/current")
+        const { data } = await instance.get("/users/current")
         return data
     }
     catch(error) {
