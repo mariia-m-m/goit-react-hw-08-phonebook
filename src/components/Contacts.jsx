@@ -22,7 +22,7 @@ Contacts.propTypes = {
       id: PropTypes.string.isRequired,
       // number: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      main: PropTypes.bool.isRequired,
+      // main: PropTypes.bool.isRequired,
     })
   ),
 };
