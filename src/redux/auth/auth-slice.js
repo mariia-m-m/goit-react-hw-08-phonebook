@@ -19,8 +19,10 @@ const authSlice = createSlice({
             state.error = null;
         })
             .addCase(signup.fulfilled, (state, { payload }) => {
+                 const { name, email } = payload;
                 state.loading = false;
-                state.user = payload.user;
+                state.user.name = name;
+                state.user.email = email;
                 state.token = payload.token;
                 state.isLogin=true
             })
@@ -33,8 +35,10 @@ const authSlice = createSlice({
             state.error = null;
         })
             .addCase(login.fulfilled, (state, { payload }) => {
+                const { name, email } = payload;
                 state.loading = false;
-                state.user = payload.user;
+                state.user.name = name;
+                state.user.email = email;
                 state.token = payload.token;
                 state.isLogin=true
             })
@@ -63,15 +67,18 @@ const authSlice = createSlice({
               state.loading = true;
             state.error = null;
         })
-            .addCase(logout.fulfilled, (state) => {
+            .addCase(logout.fulfilled, (state,{payload}) => {
+                const { name, email } = payload;
                 state.loading = false;
-                state.user = {};
+                state.user.name = name;
+                state.user.email = email;
                 state.token = "";
                 state.isLogin=false
             })
             .addCase(logout.rejected, (state, { payload }) => {
                 state.loading = false;
                 state.error = payload;
+                
         })
     }
 })
