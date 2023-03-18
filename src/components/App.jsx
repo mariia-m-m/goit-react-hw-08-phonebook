@@ -1,5 +1,4 @@
 import { BrowserRouter } from 'react-router-dom';
-import { lazy } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Provider } from 'react-redux';
 import { store, persistor } from '../redux/store';
