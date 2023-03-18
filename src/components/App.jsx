@@ -9,7 +9,7 @@ import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
 const Phonebook = lazy(() => import('../pages/Phonebook/Phonebook'));
-const MainContacts = lazy(() => import('../pages/MainContacts/MainContacts'));
+// const MainContacts = lazy(() => import('../pages/MainContacts/MainContacts'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 const RegistrationPage = lazy(() =>
   import('../pages/RegistrationPage/RegistrationPage')
