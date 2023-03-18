@@ -9,8 +9,8 @@ const items = [
     },
         {
         id: nanoid(3),
-        title: 'Main Contacts',
-        link: "/main_contacts",
+        title: 'Contacts',
+        link: "/contacts",
         private:true
     },
                   

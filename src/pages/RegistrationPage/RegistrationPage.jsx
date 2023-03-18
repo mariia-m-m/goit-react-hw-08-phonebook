@@ -13,8 +13,9 @@ const RegistrationPage = () => {
   };
 
   if (isLogin) {
-    return <Navigate to="/" />;
+    return <Navigate to="/contacts" />;
   }
+
   return <RegistrationForm onSubmit={handleSignup} />;
 };
 

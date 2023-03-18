@@ -42,4 +42,6 @@ export const logout = async () => {
 return data
 }
 
+
+
 export default instance

@@ -1,8 +1,8 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from 'redux/auth/auth-operations';
+import LoginForm from 'components/Login/LoginForm';
 import { isUserLogin } from 'redux/auth/auth-selector';
 import { Navigate } from 'react-router-dom';
-import LoginForm from 'components/Login/LoginForm';
 
 const LoginPage = () => {
   const isLogin = useSelector(isUserLogin);
@@ -13,8 +13,9 @@ const LoginPage = () => {
   };
 
   if (isLogin) {
-    return <Navigate to="goit-react-hw-08-phonebook" />;
+    return <Navigate to="/contacts" />;
   }
+
   return <LoginForm onSubmit={handleLogin} />;
 };
 

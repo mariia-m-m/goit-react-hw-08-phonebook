@@ -15,6 +15,7 @@ const RegistrationPage = lazy(() =>
   import('../pages/RegistrationPage/RegistrationPage')
 );
 const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
+const ContactsPage = lazy(() => import('../pages/ContactsPage'));
 
 export const App = () => {
   return (
@@ -26,10 +27,6 @@ export const App = () => {
               <Navbar />
               <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                  <Route exact path="/" element={<Phonebook />} />
-                  <Route element={<PrivateRoute />}>
-                    <Route path="/main_contacts" element={<MainContacts />} />
-                  </Route>
                   <Route element={<PublicRoute />}>
                     <Route
                       path="/registration"
@@ -38,6 +35,11 @@ export const App = () => {
                     <Route path="/login" element={<LoginPage />} />
                   </Route>
                   <Route path="*" element={<NotFound />} />
+
+                  <Route element={<PrivateRoute />}>
+                    <Route exact path="/" element={<Phonebook />} />
+                    <Route path="/contacts" element={<ContactsPage />} />
+                  </Route>
                 </Routes>
               </Suspense>
             </BrowserRouter>
