@@ -7,6 +7,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import AuthLayout from './AuthLayout';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import UserRoutes from './UserRoutes';
 
 const Phonebook = lazy(() => import('../pages/Phonebook/Phonebook'));
 // const MainContacts = lazy(() => import('../pages/MainContacts/MainContacts'));
@@ -25,23 +26,7 @@ export const App = () => {
           <AuthLayout>
             <BrowserRouter basename="/goit-react-hw-08-phonebook">
               <Navbar />
-              <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                  <Route element={<PublicRoute />}>
-                    <Route
-                      path="/registration"
-                      element={<RegistrationPage />}
-                    />
-                    <Route path="/login" element={<LoginPage />} />
-                  </Route>
-                  <Route path="*" element={<NotFound />} />
-
-                  <Route element={<PrivateRoute />}>
-                    <Route exact path="/" element={<Phonebook />} />
-                    <Route path="/contacts" element={<ContactsPage />} />
-                  </Route>
-                </Routes>
-              </Suspense>
+              <UserRoutes />
             </BrowserRouter>
           </AuthLayout>
         </PersistGate>
